@@ -47,6 +47,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
                 break;
             
+            case 'add':
+                var answer = parseInt(args[1]) + parseInt(args[2]);
+                bot.sendMessage({
+                    to: channelID,
+                    message: "" + answer
+                })
+                break;
+            
         }
     }
 })
